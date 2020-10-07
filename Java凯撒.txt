@@ -1,0 +1,24 @@
+public class Casear2 {
+	public static void main(String[] args) {
+		String outText = "Daniel";
+		int key = 3;
+		String cipher = encrypt(outText,key);
+		
+		System.out.print(cipher);
+	}
+	
+	
+	private static String encrypt(String outText , int key) {
+		char[] charArray = outText.toCharArray();
+		for(int a = 0; a < charArray.length; a++);{
+		char b = (char)(charArray[a] + 3);
+		  charArray[a] = b;
+		  charArray[a] += key;
+	}
+     
+	  return new String(charArray);
+  
+	
+	}
+  }
+
